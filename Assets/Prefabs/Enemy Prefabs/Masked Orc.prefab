@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8052720193432708360}
   - component: {fileID: 3148770475184228176}
   - component: {fileID: 1381497123656021144}
+  - component: {fileID: -6071463039251135985}
   m_Layer: 0
   m_Name: Masked Orc
   m_TagString: Enemy
@@ -168,3 +169,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-6071463039251135985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562082082350839232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69028eea11d5d045bf901d49293b3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

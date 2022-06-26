@@ -11,9 +11,11 @@ public class PlayerShootingManager : MonoBehaviour
 
   private PlayerWeaponManager playerWeaponManager;
 
+
   private void Awake()
   {
     playerWeaponManager = GetComponent<PlayerWeaponManager>();
+
   }
 
   private void Update()
