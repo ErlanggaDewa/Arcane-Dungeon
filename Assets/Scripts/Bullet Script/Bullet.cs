@@ -43,12 +43,12 @@ public class Bullet : MonoBehaviour
     collision.CompareTag(TagManager.SHOOTER_ENEMY_TAG) ||
     collision.CompareTag(TagManager.BOSS_TAG))
     {
-
+      destroyObj = true;
     }
 
     if (collision.CompareTag(TagManager.BLOCKING_TAG))
     {
-
+      destroyObj = true;
     }
   }
 }
