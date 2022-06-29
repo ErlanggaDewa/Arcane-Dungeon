@@ -19,4 +19,6 @@ public static class TagManager
   public static string OPEN_ANIMATION_PARAMETER = "Open";
   public static string BLOCKING_LAYER_MASK = "Blocking";
   public static string PLAYER_WEAPON_OBJECT_NAME = "Gun Sprites";
+  public static string WAVE_MANAGER = "Wave Manager";
+  public static string GATE = "Gate";
 }

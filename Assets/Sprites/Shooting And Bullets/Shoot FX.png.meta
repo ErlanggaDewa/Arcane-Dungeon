@@ -4,13 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 5875615830756826230
-    second: muzzle1
+    second: Ice Zombie Bullet
   - first:
       213: -5314071538518937483
-    second: muzzle2
+    second: Imp Bullet
   - first:
       213: 2364246972382263396
-    second: muzzle3
+    second: Big Boss Bullet
+  - first:
+      213: 1906410090586040074
+    second: Masked Bullet
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: muzzle1
+      name: Ice Zombie Bullet
       rect:
         serializedVersion: 2
-        x: 49
+        x: 94
         y: 110
-        width: 12
-        height: 13
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,15 +124,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muzzle2
+      name: Imp Bullet
       rect:
         serializedVersion: 2
-        x: 66
-        y: 113
-        width: 9
-        height: 9
+        x: 118
+        y: 118
+        width: 6
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,15 +145,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muzzle3
+      name: Big Boss Bullet
       rect:
         serializedVersion: 2
-        x: 82
-        y: 114
-        width: 7
-        height: 7
+        x: 4
+        y: 20
+        width: 39
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,6 +161,27 @@ TextureImporter:
       bones: []
       spriteID: 4683326581e7fc020800000000000000
       internalID: 2364246972382263396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Masked Bullet
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07e99570ede47a10800000000000000
+      internalID: 1906410090586040074
       vertices: []
       indices: 
       edges: []

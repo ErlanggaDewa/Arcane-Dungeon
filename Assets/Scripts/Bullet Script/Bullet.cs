@@ -55,22 +55,22 @@ public class Bullet : MonoBehaviour
     collision.CompareTag(TagManager.BOSS_TAG))
     {
       SpawnExplosion();
-
-      destroyObj = true;
+      if (collision.TryGetComponent(out EnemyManager enemy))
+      {
+        enemy.Damage();
+        destroyObj = true;
+      }
     }
 
-    if (collision.CompareTag(TagManager.BLOCKING_TAG))
+    if (collision.CompareTag(TagManager.BLOCKING_TAG) || collision.CompareTag(TagManager.GATE))
     {
       SpawnExplosion();
-
       destroyObj = true;
     }
   }
   private void SpawnExplosion()
   {
-
-
-    GameObject muzzleSpawn = Instantiate(playerWeaponManager.muzzleFlash, gameObject.transform.position, playerWeaponManager.muzzleFlash.transform.rotation);
-    Destroy(muzzleSpawn, .5f);
+    GameObject explosionEffect = Instantiate(playerWeaponManager.explosionEffect, gameObject.transform.position, playerWeaponManager.explosionEffect.transform.rotation);
+    Destroy(explosionEffect, .5f);
   }
 }

@@ -10,7 +10,7 @@ public class PlayerWeaponManager : MonoBehaviour
   [SerializeField]
   private GameObject[] weaponBullets;
 
-  public GameObject muzzleFlash;
+  public GameObject explosionEffect;
 
   private Vector2 targetPos;
   private Vector2 direction;
@@ -19,9 +19,6 @@ public class PlayerWeaponManager : MonoBehaviour
   private Quaternion bulletRotation;
 
   private AudioSource playerAudio;
-
-
-
 
   private void Awake()
   {
