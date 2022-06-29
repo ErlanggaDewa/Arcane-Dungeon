@@ -18,12 +18,14 @@ public class Bullet : MonoBehaviour
   private bool destroyObj;
 
   private PlayerWeaponManager playerWeaponManager;
+  public float bulletDamage;
 
 
 
   // Start is called before the first frame update
   private void Awake()
   {
+
     playerWeaponManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerWeaponManager>();
 
     myBody = GetComponent<Rigidbody2D>();
@@ -57,7 +59,7 @@ public class Bullet : MonoBehaviour
       SpawnExplosion();
       if (collision.TryGetComponent(out EnemyManager enemy))
       {
-        enemy.Damage();
+        enemy.Damage(bulletDamage);
         destroyObj = true;
       }
     }

@@ -20,7 +20,8 @@ public class TriggerWaveManager : MonoBehaviour
     if (other.gameObject.CompareTag(TagManager.PLAYER_TAG))
     {
       ActivateSelectedGate();
-      ActivateEnemy();
+      if (gameObject)
+        ActivateEnemy();
     }
   }
 
@@ -28,7 +29,7 @@ public class TriggerWaveManager : MonoBehaviour
   {
     foreach (GameObject enemy in enemies)
     {
-      if (enemy.GetComponent<EnemyManager>().GetWaveId() == waveId)
+      if (gameObject != null && enemy != null && enemy.GetComponent<EnemyManager>().GetWaveId() == waveId)
       {
         enemy.GetComponent<EnemyMovement>().isCatchingPlayer = true;
         EnemyWeaponManager enemyWeaponManager = enemy.GetComponent<EnemyWeaponManager>();
@@ -47,9 +48,9 @@ public class TriggerWaveManager : MonoBehaviour
     {
       if (gate && gate.GetComponent<GateManager>().GetGateId() == waveId)
       {
+        Destroy(gameObject, .5f);
         audioSource.Play();
         gate.GetComponent<GateManager>().OpenGate(waveId);
-        Destroy(gameObject, .5f);
       }
     }
   }

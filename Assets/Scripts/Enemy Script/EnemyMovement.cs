@@ -34,18 +34,22 @@ public class EnemyMovement : MonoBehaviour
 
   private void EnemyHandlerMovement()
   {
-    direction = (player.transform.position - transform.position).normalized;
-    moveDirection = direction * enemyMovementSpeed;
-    rbEnemy.velocity = new Vector2(moveDirection.x, moveDirection.y);
+    if (player)
+    {
+      direction = (player.transform.position - transform.position).normalized;
+      moveDirection = direction * enemyMovementSpeed;
+      rbEnemy.velocity = new Vector2(moveDirection.x, moveDirection.y);
 
-    if (direction.x < 0)
-      transform.localScale = new Vector3(-1, 1, 1);
+      if (direction.x < 0)
+        transform.localScale = new Vector3(-1, 1, 1);
+      else
+        transform.localScale = new Vector3(1, 1, 1);
+    }
     else
-      transform.localScale = new Vector3(1, 1, 1);
+    {
+      rbEnemy.Sleep();
+    }
   }
 
-  public bool GetEnemyCatchingStatus()
-  {
-    return this.isCatchingPlayer;
-  }
+
 }

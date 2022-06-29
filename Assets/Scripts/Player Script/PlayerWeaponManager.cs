@@ -54,6 +54,14 @@ public class PlayerWeaponManager : MonoBehaviour
       weaponIndex++;
       if (weaponIndex == playerWeapons.Length)
         weaponIndex = 0;
+
+      if (weaponIndex == 0)
+        PlayerShootingManager.shootingTimerLimit = .3f;
+      else if (weaponIndex == 1)
+        PlayerShootingManager.shootingTimerLimit = .6f;
+      else if (weaponIndex == 2)
+        PlayerShootingManager.shootingTimerLimit = 1.2f;
+
       playerWeapons[weaponIndex].gameObject.SetActive(true);
     }
   }

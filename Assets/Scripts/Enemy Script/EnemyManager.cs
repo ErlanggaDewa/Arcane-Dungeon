@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour, IGetHealthSystem
   public float healthNumber;
   private HealthSystem healthSystem;
   public float wave;
+  public float enemyDamage;
 
 
 
@@ -16,7 +17,6 @@ public class EnemyManager : MonoBehaviour, IGetHealthSystem
     healthSystem.OnDead += HealthSystem_OnDead;
   }
 
-  // Start is called before the first frame update
   void Start()
   {
     enemyAnimator = gameObject.GetComponent<Animator>();
@@ -28,20 +28,24 @@ public class EnemyManager : MonoBehaviour, IGetHealthSystem
 
     if (other.gameObject.CompareTag(TagManager.PLAYER_TAG))
     {
-      Debug.Log("Hit Player");
+      if (other.TryGetComponent(out PlayerManager player))
+      {
+        player.Damage(enemyDamage);
+      }
     }
 
   }
 
-  public void Damage()
+  public void Damage(float playerDamage)
   {
-    healthSystem.Damage(10);
+    healthSystem.Damage(playerDamage);
   }
 
   private void HealthSystem_OnDead(object sender, System.EventArgs e)
   {
     enemyAnimator.SetBool(TagManager.DEATH_ANIMATION_PARAMETER, true);
     Destroy(gameObject, .25f);
+
   }
 
   public HealthSystem GetHealthSystem()

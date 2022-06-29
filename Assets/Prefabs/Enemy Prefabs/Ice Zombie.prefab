@@ -186,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthNumber: 100
   wave: 0
+  enemyDamage: 5
 --- !u!114 &2605943401556779699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 1044035119182036820, guid: ccbad93d03b5ea2428dcef1d861d9b85, type: 3}
-  fireRate: 2
+  fireRate: 3
   isShooting: 0
 --- !u!1001 &1554286423857728109
 PrefabInstance:
@@ -233,6 +234,10 @@ PrefabInstance:
     - target: {fileID: 6848739074368699836, guid: f1419c2a3f5ecf44e824039f908fea60, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848739074368699837, guid: f1419c2a3f5ecf44e824039f908fea60, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 373724715
       objectReference: {fileID: 0}
     - target: {fileID: 6848739074368699838, guid: f1419c2a3f5ecf44e824039f908fea60, type: 3}
       propertyPath: m_Pivot.x

@@ -186,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthNumber: 100
   wave: 0
+  enemyDamage: 5
 --- !u!114 &-1045276263174189090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 1913863828258782081, guid: c33495115b61210408dfc1085189de97, type: 3}
-  fireRate: 1
+  fireRate: 5
   isShooting: 0
 --- !u!1001 &1714977521170373644
 PrefabInstance:

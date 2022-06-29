@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerShootingManager : MonoBehaviour
 {
   [SerializeField]
-  private float shootingTimerLimit = 0.2f;
+  public static float shootingTimerLimit;
   private float shootingTimer;
 
   [SerializeField]
@@ -14,6 +14,7 @@ public class PlayerShootingManager : MonoBehaviour
 
   private void Awake()
   {
+    shootingTimerLimit = .3f;
     playerWeaponManager = GetComponent<PlayerWeaponManager>();
 
   }

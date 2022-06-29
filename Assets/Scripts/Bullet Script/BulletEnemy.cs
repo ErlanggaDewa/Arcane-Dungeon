@@ -6,14 +6,17 @@ public class BulletEnemy : MonoBehaviour
   Rigidbody2D bulletRb;
   Vector2 moveDirection;
   public float bulletSpeed;
-  public float damage;
+  public float bulletDamage;
 
   void Start()
   {
     bulletRb = gameObject.GetComponent<Rigidbody2D>();
     playerTarget = GameObject.FindWithTag(TagManager.PLAYER_TAG);
-    moveDirection = (playerTarget.transform.position - transform.position).normalized * bulletSpeed;
-    bulletRb.velocity = new Vector2(moveDirection.x, moveDirection.y);
+    if (playerTarget)
+    {
+      moveDirection = (playerTarget.transform.position - transform.position).normalized * bulletSpeed;
+      bulletRb.velocity = new Vector2(moveDirection.x, moveDirection.y);
+    }
   }
 
   // Update is called once per frame
@@ -22,6 +25,10 @@ public class BulletEnemy : MonoBehaviour
   {
     if (other.CompareTag(TagManager.BLOCKING_TAG) || other.CompareTag(TagManager.PLAYER_TAG) || other.CompareTag(TagManager.GATE))
     {
+      if (other.TryGetComponent(out PlayerManager player))
+      {
+        player.Damage(bulletDamage);
+      }
       Destroy(gameObject);
     }
   }

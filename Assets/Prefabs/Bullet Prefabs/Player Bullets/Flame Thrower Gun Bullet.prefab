@@ -158,3 +158,4 @@ MonoBehaviour:
   damageAmount: 25
   deactivateTimer: 3
   destroyObj: 0
+  bulletDamage: 80

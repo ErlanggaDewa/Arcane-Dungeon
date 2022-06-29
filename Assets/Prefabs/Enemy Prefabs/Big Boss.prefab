@@ -184,8 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69028eea11d5d045bf901d49293b3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthNumber: 100
+  healthNumber: 1000
   wave: 0
+  enemyDamage: 20
 --- !u!114 &3824755421869808856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 853367181019996738, guid: d66fc6709c76d4243b678096ef9a203c, type: 3}
-  fireRate: 2
+  fireRate: 0.3
   isShooting: 0
 --- !u!1001 &337636077766226950
 PrefabInstance:
